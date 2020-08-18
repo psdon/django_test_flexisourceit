@@ -8,7 +8,7 @@ def buy_stock(request, name, quantity):
     :param request: Request Object
     :param name: String stock name
     :param quantity: Integer
-    :return: Dict Object with status
+    :return: Dict(stock_symbol, quantity)
     """
     stock_obj = Stock.objects.filter(name=name).first()
 
@@ -43,7 +43,7 @@ def sell_stock(request, name, quantity):
        :param request: Request Object
        :param name: String stock name
        :param quantity: Integer
-       :return: Dict Object with status
+       :return: Dict(stock_symbol, quantity)
        """
     stock_obj = Stock.objects.filter(name=name).first()
 
