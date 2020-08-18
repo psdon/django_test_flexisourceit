@@ -18,3 +18,6 @@ Run a command inside the docker container:
 ```bash
 docker-compose run --rm web [command]
 ```
+
+# Note to New Developer
+- Read [Django Best Practices](https://github.com/HackSoftware/Django-Styleguide)
