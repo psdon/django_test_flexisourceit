@@ -1,4 +1,5 @@
 import os
+
 from .common import Common
 
 
@@ -8,7 +9,7 @@ class Production(Common):
     # Site
     # https://docs.djangoproject.com/en/2.0/ref/settings/#allowed-hosts
     ALLOWED_HOSTS = ["*"]
-    INSTALLED_APPS += ("gunicorn", )
+    INSTALLED_APPS += ("gunicorn",)
 
     # Static files (CSS, JavaScript, Images)
     # https://docs.djangoproject.com/en/2.0/howto/static-files/

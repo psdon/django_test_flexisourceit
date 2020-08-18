@@ -1,13 +1,14 @@
 import os
-from os.path import join
 from distutils.util import strtobool
+from os.path import join
+
 import dj_database_url
 from configurations import Configuration
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 class Common(Configuration):
-
     INSTALLED_APPS = (
         'django.contrib.admin',
         'django.contrib.auth',
@@ -16,11 +17,10 @@ class Common(Configuration):
         'django.contrib.messages',
         'django.contrib.staticfiles',
 
-
         # Third party apps
-        'rest_framework',            # utilities for rest apis
+        'rest_framework',  # utilities for rest apis
         'rest_framework.authtoken',  # token authentication
-        'django_filters',            # for filtering rest endpoints
+        'django_filters',  # for filtering rest endpoints
 
         # Your apps
         'app.users',
