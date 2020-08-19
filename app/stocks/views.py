@@ -28,6 +28,8 @@ class BuyStockViewSet(viewsets.ViewSet):
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
             return Response(result, status=status.HTTP_400_BAD_REQUEST)
 
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 class SellStockViewSet(viewsets.ViewSet):
     """
@@ -49,6 +51,8 @@ class SellStockViewSet(viewsets.ViewSet):
             if result['status'] == "success":
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
             return Response(result, status=status.HTTP_400_BAD_REQUEST)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class StockOwnedViewSet(viewsets.ViewSet):

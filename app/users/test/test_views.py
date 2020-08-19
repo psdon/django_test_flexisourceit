@@ -1,13 +1,12 @@
-import factory
-from django.contrib.auth.hashers import check_password
 from django.urls import reverse
-from faker import Faker
+from django.contrib.auth.hashers import check_password
 from nose.tools import ok_, eq_
-from rest_framework import status
 from rest_framework.test import APITestCase
-
-from .factories import UserFactory
+from rest_framework import status
+from faker import Faker
+import factory
 from ..models import User
+from .factories import UserFactory
 
 fake = Faker()
 

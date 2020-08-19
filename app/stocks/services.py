@@ -61,7 +61,7 @@ def sell_stock(request, name, quantity):
             "message": "The user does not own this stock."
         }
 
-    new_quantity = stock_owned_obj.quantity - quantity
+    new_quantity = int(stock_owned_obj.quantity) - int(quantity)
     if new_quantity == 0:
         stock_owned_obj.delete()
         return {

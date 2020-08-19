@@ -180,6 +180,11 @@ class Common(Configuration):
         }
     }
 
+    if DEBUG:
+        # make all loggers use the console.
+        for logger in LOGGING['loggers']:
+            LOGGING['loggers'][logger]['handlers'] = ['console']
+
     # Custom user app
     AUTH_USER_MODEL = 'users.User'
 
